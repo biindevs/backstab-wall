@@ -8,8 +8,4 @@ const {
 
 router.route("/").get(getMessages).post(createMessage);
 
-router.delete("/:id", (req, res) => {
-    res.status(200).json({ message: "Message deleted successfully" });
-});
-
 module.exports = router;

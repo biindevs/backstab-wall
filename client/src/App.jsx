@@ -1,22 +1,24 @@
 import MessageBox from "./components/MessageBox";
 import { useEffect } from "react";
-import { useDisclosure } from "@chakra-ui/react";
-import NewMessageModal from "./modal/newMessageModal";
-import Navbar from "./components/Navbar";
 import { useMessagesStore } from "./store/messagesStore";
+import Header from "./components/Header";
+import MessageForm from "./components/MessageForm";
 
 const Homepage = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const { getMessages, messages } = useMessagesStore();
+    const { getMessages, messages, getDate } = useMessagesStore();
 
     useEffect(() => {
         getMessages();
     }, []);
 
     return (
-        <>
-            <Navbar onOpen={onOpen} />
-            <div className="w-full h-screen grid lg:grid-cols-3 gap-10 p-8">
+        <div className="w-full min-h-screen flex flex-col items-center bg-[#f8f9fa]">
+            <div className="w-full h-[50vh] flex flex-col items-center p-8 mb-[20rem] text-white bg-[#385898]">
+                <Header />
+                <MessageForm />
+            </div>
+
+            <div className="w-full h-full grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-5 justify-items-center gap-10 p-10">
                 {messages &&
                     messages.map((message) => (
                         <MessageBox
@@ -27,8 +29,10 @@ const Homepage = () => {
                     ))}
             </div>
 
-            <NewMessageModal isOpen={isOpen} onClose={onClose} />
-        </>
+            <small className="font-bold tracking-widest mb-5">
+                GEMMUEL DELA PENA
+            </small>
+        </div>
     );
 };
 

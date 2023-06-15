@@ -10,6 +10,10 @@ const messagesSchema = mongoose.Schema(
             type: String,
             required: [true, "Please add a message"],
         },
+        date: {
+            type: String,
+            required: [true, "Please add a date"],
+        },
     },
     {
         timestamps: true,

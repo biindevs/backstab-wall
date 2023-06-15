@@ -10,6 +10,7 @@ const messagesStore = (set, get) => ({
             set({ messages: data });
         } catch (error) {
             console.log(error);
+            alert(`${error}, Please restart the page.`);
         }
     },
     createMessage: async (title, message) => {
@@ -20,14 +21,25 @@ const messagesStore = (set, get) => ({
                 body: JSON.stringify({
                     title,
                     message,
+                    date: get().getDate(),
                 }),
             });
             const data = await response.json();
-            console.log(data);
+
             get().getMessages();
         } catch (error) {
             console.log(error);
+            alert(`${error}, Please restart the page.`);
         }
+    },
+    getDate: () => {
+        const currentDate = new Date();
+        const month = currentDate.getMonth() + 1;
+        const day = currentDate.getDay();
+        const year = currentDate.getFullYear();
+        console.log(`${month}/${day}/${year}`);
+
+        return `${month}/${day}/${year}`;
     },
 });
 
