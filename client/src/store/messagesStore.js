@@ -21,7 +21,7 @@ const messagesStore = (set, get) => ({
                 body: JSON.stringify({
                     title,
                     message,
-                    date: get().getDate(),
+                    date: new Date().toDateString(),
                 }),
             });
             const data = await response.json();
@@ -31,15 +31,6 @@ const messagesStore = (set, get) => ({
             console.log(error);
             alert(`${error}, Please restart the page.`);
         }
-    },
-    getDate: () => {
-        const currentDate = new Date();
-        const month = currentDate.getMonth() + 1;
-        const day = currentDate.getDay();
-        const year = currentDate.getFullYear();
-        console.log(`${month}/${day}/${year}`);
-
-        return `${month}/${day}/${year}`;
     },
 });
 

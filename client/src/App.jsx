@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import MessageForm from "./components/MessageForm";
 
 const Homepage = () => {
-    const { getMessages, messages, getDate } = useMessagesStore();
+    const { getMessages, messages } = useMessagesStore();
 
     useEffect(() => {
         getMessages();
@@ -24,6 +24,7 @@ const Homepage = () => {
                         <MessageBox
                             title={message.title}
                             message={message.message}
+                            date={message.date}
                             key={message._id}
                         />
                     ))}
