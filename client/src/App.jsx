@@ -13,12 +13,12 @@ const Homepage = () => {
 
     return (
         <div className="w-full min-h-screen flex flex-col items-center bg-[#f8f9fa]">
-            <div className="w-full h-[50vh] flex flex-col items-center p-8 mb-[20rem] text-white bg-[#385898]">
+            <div className="w-full h-[50vh] flex flex-col items-center p-2 2xl:p-8 mb-[30rem] 2xl:mb-[10rem] text-white bg-[#385898]">
                 <Header />
                 <MessageForm />
             </div>
 
-            <div className="w-full h-full grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-5 justify-items-center gap-10 p-10">
+            <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 justify-items-center items-center gap-10 p-10">
                 {messages &&
                     messages.map((message) => (
                         <MessageBox

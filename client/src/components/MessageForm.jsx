@@ -34,7 +34,7 @@ const MessageForm = () => {
     };
 
     return (
-        <div className="relative z-50 w-[55%] flex gap-4 p-6 mt-6 text-black bg-white rounded-lg shadow-xl">
+        <div className="relative z-50 w-[80vw] xl:w-[55%] flex flex-col 2xl:flex-row gap-4 p-6 mt-6 text-black bg-white rounded-lg shadow-xl">
             <div className="w-full flex flex-col items-center justify-center ">
                 <img src="/logo.svg" alt="illustration" className="w-[300px]" />
                 <h2 className="text-xl font-semibold text-center">
@@ -51,6 +51,7 @@ const MessageForm = () => {
                             placeholder="Title"
                             required
                             onChange={(e) => setTitle(e.target.value)}
+                            autoComplete="off"
                         />
                         <FormLabel>Message:</FormLabel>
                         <Textarea
