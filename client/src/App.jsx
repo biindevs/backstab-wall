@@ -24,7 +24,7 @@ const Homepage = () => {
 
   return (
     <div className="flex flex-col justify-between min-h-screen bg-[#f8f9fa]">
-      <div className="w-full h-[50vh] flex flex-col items-center pt-2 pb-4 sm:p-4 lg:p-6 xl:p-8 mb-12 lg:mb-16 xl:mb-20 2xl:mb-[5rem] text-white bg-[#385898]">
+      <div className="w-full h-[50vh] flex flex-col items-center pt-2 pb-4 sm:p-4 lg:p-6 xl:p-8 mb-12 lg:mb-16 xl:mb-20 2xl:mb-[5rem] text-white bg-[#08003a]">
         <Header />
         <button
           className="p-2 rounded-lg bg-blue-500 text-white mt-4"
