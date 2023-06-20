@@ -14,9 +14,9 @@ app.use(express.json());
 app.use("/messages", require("./routes/messagesRoute"));
 
 connectDb()
-    .then(() => {
-        app.listen(port, () => {
-            console.log(`Server is running on Port: ${port}`);
-        });
-    })
-    .catch((err) => console.log(err));
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Server is running on Port: ${port}`);
+    });
+  })
+  .catch((err) => console.log(err));
