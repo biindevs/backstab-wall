@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MessageBox from "./components/MessageBox";
 import { useMessagesStore } from "./store/messagesStore";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import MessageForm from "./components/MessageForm";
 
 const Homepage = () => {
@@ -45,7 +46,7 @@ const Homepage = () => {
           ))}
       </div>
 
-      <small className="font-bold tracking-widest mb-5">Bin-baz Akilan</small>
+      <Footer />
     </div>
   );
 };
