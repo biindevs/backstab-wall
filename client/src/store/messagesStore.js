@@ -5,7 +5,7 @@ const messagesStore = (set, get) => ({
   getMessages: async () => {
     try {
       const response = await fetch(
-        "https://confession-wall.onrender.com:10000/messages"
+        "https://confession-wall.onrender.com/messages"
       );
       const data = await response.json();
 
@@ -18,7 +18,7 @@ const messagesStore = (set, get) => ({
   createMessage: async (title, message) => {
     try {
       const response = await fetch(
-        "https://confession-wall.onrender.com:10000/messages",
+        "https://confession-wall.onrender.com/messages",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
