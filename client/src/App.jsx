@@ -34,7 +34,7 @@ const Homepage = () => {
         </button>
         {isModalOpen && <MessageForm closeModal={closeModal} />}
       </div>
-      <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 justify-items-center items-center gap-6 lg:gap-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+      <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 justify-items-center items-center gap-10 p-10">
         {messages &&
           messages.map((message) => (
             <MessageBox
